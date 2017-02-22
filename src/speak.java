@@ -14,7 +14,7 @@ public class speak  {
 	public void checkFile(String path){
 		try
 		{
-		x=new Formatter("C:\\Users\\Monal\\Desktop\\test.txt");
+		x=new Formatter(path);
 		x.close();
 		}
 	catch(Exception e)
@@ -26,7 +26,7 @@ public class speak  {
 	public String readFile(String path){
 		StringBuffer content=new StringBuffer("");
 		System.out.println(content);
-		Scanner in = new Scanner("C:\\Users\\Monal\\Desktop\\test.txt");
+		Scanner in = new Scanner(path);
 		while (in.hasNext()) 
 		{
 			String s = in.next();
