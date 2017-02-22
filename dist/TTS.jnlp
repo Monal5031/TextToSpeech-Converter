@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="TTS.jnlp">
+  <information>
+    <title>TTS</title>
+    <vendor>Monal</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="TTS.jar" size="2445" download="eager" />
+    <jar href="lib\cmu_time_awb.jar" size="1723774" download="eager" />
+    <jar href="lib\cmu_us_kal.jar" size="4899359" download="eager" />
+    <jar href="lib\cmudict04.jar" size="894905" download="eager" />
+    <jar href="lib\cmulex.jar" size="599429" download="eager" />
+    <jar href="lib\cmutimelex.jar" size="1231" download="eager" />
+    <jar href="lib\en_us.jar" size="866598" download="eager" />
+    <jar href="lib\freetts-jsapi10.jar" size="56313" download="eager" />
+    <jar href="lib\freetts.jar" size="208668" download="eager" />
+    <jar href="lib\mbrola.jar" size="11926" download="eager" />
+  </resources>
+  <application-desc main-class="TTS.speak"  name="TTS" >
+  </application-desc>
+  <update check="always"/>
+</jnlp>
