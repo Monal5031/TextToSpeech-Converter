@@ -61,18 +61,18 @@ public class TextToSpeech  {
 		String path = br.nextLine();
 		
 		System.out.println("path is:"+path);
-		FileReader fp = new FileReader(path);
-                if(fp.ready()){
-                    System.out.println("Hooray!! File exists");
-                    String s=talk.readFile(fp);
-                    System.out.println("File has been read. Do you wish to hear it? 1-->yes 0-->no");
-                    int passer=br.nextInt();
-                    if(passer==1)
-                        talk.talk(s);
-                    br.close();
+		try{
+                    FileReader fp = new FileReader(path);
+                        System.out.println("Hooray!! File exists");
+                        String s=talk.readFile(fp);
+                        System.out.println("File has been read. Do you wish to hear it? 1-->yes 0-->no");
+                        int passer=br.nextInt();
+                        if(passer==1)
+                             talk.talk(s);
+                        br.close();
                 }
-                else{
-                    System.out.println("File path is not valid");
-                }
+                catch(FileNotFoundException e1){
+                    System.out.println("File does not exists");
 	}	
-}  
+    }
+}
